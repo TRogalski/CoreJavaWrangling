@@ -8,12 +8,6 @@ public class NumberGuesser {
 
     private static Integer numberToGuess;
 
-    public static void main(String[] args) {
-        NumberGuesser numberGuesser = new NumberGuesser();
-        numberGuesser.playTheGame();
-    }
-
-
     private void playTheGame() {
         this.showWelcomeMessages();
         this.generateANumberToBeGuessed();
