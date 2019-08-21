@@ -8,7 +8,7 @@ public class NumberGuesser {
 
     private static Integer numberToGuess;
 
-    private void playTheGame() {
+    public void playTheGame() {
         this.showWelcomeMessages();
         this.generateANumberToBeGuessed();
         this.runCoreGameLogic();

@@ -7,12 +7,7 @@ public class LottoMachine {
     private List<Integer> lotteryNumbers;
     private List<Integer> couponNumbers;
 
-    public static void main(String[] args) {
-        LottoMachine lottoMachine = new LottoMachine();
-        lottoMachine.playTheGame();
-    }
-
-    private void playTheGame() {
+    public void playTheGame() {
         this.showWelcomeMessages();
         this.getNumbersFromPlayer();
         this.getNumbersFromTheLottery();
