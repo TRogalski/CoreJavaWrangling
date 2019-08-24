@@ -8,11 +8,6 @@ public class NumberGuesserReversed {
 
     private List<String> playerGuidanceOptions = Arrays.asList("higher", "lower", "hit");
 
-    public static void main(String[] args) {
-        NumberGuesserReversed numberGuesserReversed = new NumberGuesserReversed();
-        numberGuesserReversed.playTheGame();
-    }
-
     public void playTheGame() {
         this.showWelcomeMessages();
         this.runCoreGameLogic();
