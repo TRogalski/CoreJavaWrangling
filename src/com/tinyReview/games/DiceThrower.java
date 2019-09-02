@@ -1,20 +1,15 @@
-package com.tinyReview;
+package com.tinyReview.games;
 
 import java.sql.SQLOutput;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DiceThrower {
+public class DiceThrower implements Game{
 
     private List<String> availableDices = new ArrayList<>(Arrays.asList("D3", "D4", "D6", "D8", "D10", "D12", "D20", "D100"));
 
-    public static void main(String[] args) {
-        DiceThrower diceThrower = new DiceThrower();
-        diceThrower.playTheGame();
-    }
-
-    private void playTheGame() {
+    public void playTheGame() {
         this.showWelcomeMessages();
         this.getInputsFromPlayerAndGenerateResuts();
         this.displayExitMessages();
@@ -23,8 +18,8 @@ public class DiceThrower {
     private void showWelcomeMessages() {
         System.out.println("This is a dice throwing simulator.\n" +
                 "Define a dice throw according to this formula: xDy+z\n" +
-                "x - number of dice sides \n" +
-                "y - number of throws \n" +
+                "x - number of throws \n" +
+                "y - number of dice sides \n" +
                 "z - number to be added/subtracted from the result");
         System.out.println("Available dices: " + this.availableDices.toString());
     }
@@ -122,6 +117,6 @@ public class DiceThrower {
     }
 
     private void displayExitMessages() {
-        System.out.println("Thank you for using this tool!");
+        System.out.println("Thank you for using this tool!\n");
     }
 }

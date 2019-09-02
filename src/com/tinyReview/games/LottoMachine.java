@@ -1,8 +1,8 @@
-package com.tinyReview;
+package com.tinyReview.games;
 
 import java.util.*;
 
-public class LottoMachine {
+public class LottoMachine implements Game {
 
     private List<Integer> lotteryNumbers;
     private List<Integer> couponNumbers;
@@ -16,7 +16,7 @@ public class LottoMachine {
     }
 
     private void showWelcomeMessages() {
-        System.out.println("This is a lotto game simulator, you have to select 6 unique numbers from 1 to 49./n" +
+        System.out.println("This is a lotto game simulator, you have to select 6 unique numbers from 1 to 49.\n" +
                 "You win if you score 3, 4, 5 or 6 hits, good luck!");
     }
 
@@ -61,7 +61,7 @@ public class LottoMachine {
         Random random = new Random();
         this.lotteryNumbers = new ArrayList<Integer>();
         while (lotteryNumbers.size() - 6 < 0) {
-            Integer randomCandidate = random.nextInt(50);
+            Integer randomCandidate = random.nextInt(49)+1;
             if (!lotteryNumbers.contains(randomCandidate)) {
                 lotteryNumbers.add(randomCandidate);
             }
@@ -88,6 +88,10 @@ public class LottoMachine {
             case 0:
                 System.out.println("0 hits, it will be better next time!");
                 break;
+            case 1:
+            case 2:
+                System.out.println(numberOfHits+" hits, always something!");
+                break;
             case 3:
             case 4:
             case 5:
@@ -98,6 +102,6 @@ public class LottoMachine {
     }
 
     private void displayEndingMessages() {
-        System.out.println("Thank you for playing!");
+        System.out.println("Thank you for playing!\n");
     }
 }

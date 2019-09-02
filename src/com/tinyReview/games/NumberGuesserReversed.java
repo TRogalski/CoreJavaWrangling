@@ -1,16 +1,17 @@
-package com.tinyReview;
+package com.tinyReview.games;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class NumberGuesserReversed {
+public class NumberGuesserReversed implements Game {
 
     private List<String> playerGuidanceOptions = Arrays.asList("higher", "lower", "hit");
 
     public void playTheGame() {
         this.showWelcomeMessages();
         this.runCoreGameLogic();
+        this.displayExitMessages();
     }
 
     private void showWelcomeMessages() {
@@ -58,5 +59,8 @@ public class NumberGuesserReversed {
         }
     }
 
+    private void displayExitMessages() {
+        System.out.println("Thank you for playing!\n");
+    }
 
 }

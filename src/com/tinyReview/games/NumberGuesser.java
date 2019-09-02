@@ -1,10 +1,10 @@
-package com.tinyReview;
+package com.tinyReview.games;
 
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class NumberGuesser {
+public class NumberGuesser implements Game {
 
     private static Integer numberToGuess;
 
@@ -54,6 +54,6 @@ public class NumberGuesser {
 
 
     private void displayExitMessages() {
-        System.out.println("Thank you for playing!");
+        System.out.println("Thank you for playing!\n");
     }
 }
